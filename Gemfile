@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
-
+ruby '2.2.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 gem 'pg'
 gem 'dotenv', '~> 2.0', '>= 2.0.2'
 # Use SCSS for stylesheets
@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'spring'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -37,6 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -47,6 +49,11 @@ group :development do
   gem 'spring'
 end
 
+group :production do         
+gem 'pg'  
+gem 'rails_12factor' 
+end
+
 # source 'https://YOUR_APP_GSDK_PRO_KEY:@packagecloud.io:443/UiReady/gsdk_pro/' do
 #   gem 'gsdk_pro', '>= 1.4.0.2'
 # end
@@ -55,3 +62,9 @@ end
 gem 'spree', '3.0.4'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
+
+
+
+
+
+
